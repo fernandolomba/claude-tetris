@@ -49,4 +49,8 @@ jobs:
             Use the `gh` CLI to apply labels and post the comment. Example commands:
               gh issue edit ${{ github.event.issue.number }} --add-label "bug" --repo ${{ github.repository }}
               gh issue comment ${{ github.event.issue.number }} --body "..." --repo ${{ github.repository }}
+            The comment MUST be written in GitHub Flavored Markdown (GFM) so GitHub renders it correctly:
+              - Use headings (##, ###), bold, bullet/numbered lists, and `inline code` / fenced code blocks with a language tag.
+              - Use real line breaks in the body (e.g. pass --body "$(cat <<'EOF' ... EOF)" with a heredoc), never literal "\n" sequences.
+              - Do not use HTML unless strictly necessary, and do not wrap the whole comment in a code block.
             Be concise, helpful, and friendly. Do not over-engineer the response.
