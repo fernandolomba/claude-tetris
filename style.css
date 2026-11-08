@@ -160,3 +160,23 @@ kbd {
 #restart-btn:hover {
   background: #9bbdff;
 }
+
+/* ---- Records ---- */
+.records { font-size: 12px; color: #aaa; display: flex; flex-direction: column; gap: 6px; }
+.records[hidden] { display: none; }
+.records table { border-collapse: collapse; width: 100%; font-family: 'Courier New', Courier, monospace; }
+.records td { padding: 2px 4px; text-align: left; }
+.records td.num { text-align: right; color: #7aa2f7; }
+.records td.name { max-width: 80px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.records tr.new { background: rgba(255, 213, 79, 0.25); color: #ffd54f; font-weight: 700; }
+.records .stat { font-size: 11px; color: #888; }
+.records button, .records input {
+  font: inherit; font-size: 12px; border-radius: 4px; padding: 4px 8px;
+  border: 1px solid #3a3a5a; background: #22223a; color: #e0e0e0;
+}
+.records button { cursor: pointer; }
+.records button:hover { background: #2e2e4a; }
+.records input { width: 120px; user-select: text; }
+.records .row { display: flex; gap: 6px; justify-content: center; align-items: center; }
+.records .qualify { color: #ffd54f; font-weight: 700; }
+#overlay-records { min-width: 240px; }
