@@ -31,6 +31,11 @@
           <canvas id="next-canvas" width="120" height="120"></canvas>
         </div>
 
+        <div class="panel-section">
+          <span class="label">RECORDS</span>
+          <div id="records-panel" class="records"></div>
+        </div>
+
         <div class="panel-section controls">
           <span class="label">CONTROLS</span>
           <ul>
@@ -48,11 +53,13 @@
       <div class="overlay-box">
         <p id="overlay-title">GAME OVER</p>
         <p id="overlay-score"></p>
+        <div id="overlay-records" class="records"></div>
         <button id="restart-btn">Reiniciar</button>
       </div>
     </div>
   </div>
 
   <script src="game.js"></script>
+  <script src="records.js"></script>
 </body>
 </html>
