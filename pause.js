@@ -18,6 +18,7 @@ pauseLevelSelect.value = startLevel;
 
 function onPauseChange(isPaused) {
   if (isPaused) {
+    pauseLevelSelect.value = startLevel;
     pauseControlsList.classList.add('hidden');
     pauseControlsBtn.setAttribute('aria-expanded', 'false');
     pauseMenu.classList.remove('hidden');
