@@ -28,8 +28,8 @@ Three files, no modules/bundler — everything is loaded via plain `<script>`/`<
 
 ### Core model
 
-- **Board**: `ROWS × COLS` matrix; each cell is `0` (empty) or a color index `1–7` identifying the locked piece type.
-- **Pieces**: `PIECES` array of square matrices (index 0 unused/null, indices 1–7 are I/O/T/S/Z/J/L). Rotation (`rotateCW`) is a transpose + row-reverse, not per-shape rotation tables.
+- **Board**: `ROWS × COLS` matrix; each cell is `0` (empty) or a color index `1–8` identifying the locked piece type.
+- **Pieces**: `PIECES` array of square matrices (index 0 unused/null, indices 1–8 are I/O/T/S/Z/J/L/Nut; the Nut is a 3×3 ring with an empty center). Rotation (`rotateCW`) is a transpose + row-reverse, not per-shape rotation tables.
 - **Collision** (`collide`): checks board bounds and overlap with locked cells for a given shape/offset.
 - **Wall kicks** (`tryRotate`): after rotating, tries offsets `[0, -1, 1, -2, 2]` columns until one doesn't collide, else the rotation is discarded.
 - **Game loop** (`loop`): driven by `requestAnimationFrame`; accumulates elapsed time and advances the piece one row when `dropAccum >= dropInterval`.
